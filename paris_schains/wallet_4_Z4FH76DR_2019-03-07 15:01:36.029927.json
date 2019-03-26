@@ -1,0 +1,40 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "Z4FH76DR",
+            "owner": "0xD91E690F4dc3e9dea434033d7F20A6149117cD71",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 31622400,
+            "startDate": 1551963688,
+            "deposit": 1000000000000000000,
+            "index": 4
+        },
+        "schain_nodes": [
+            {
+                "schainIndex": 0,
+                "nodeID": 5,
+                "ip": "104.248.242.122",
+                "basePort": 8011,
+                "publicKey": "6c4b130d66b9e7b27090ae078eeecbb2d57fbec1daaa5c04b551d69b90ed4b718a18302634910cf37f1f3bc7db46dac058b82c9db17f4feeafbbb6365669931a",
+                "publicIP": "104.248.242.122",
+                "owner": "0x42161f8a9220be8c59ce38cdf20db8c819871449",
+                "rpcPort": 8014
+            },
+            {
+                "schainIndex": 1,
+                "nodeID": 8,
+                "ip": "104.248.242.242",
+                "basePort": 8022,
+                "publicKey": "58b23f54ba3a229fed714f1ead4da3ba872cf30b0e0346aa62aaee4a081d0a414f41aa80f2fbd20bd02bbdc8fafa0f2a609e66eebd694f01682d054c8b04ce16",
+                "publicIP": "104.248.242.242",
+                "owner": "0x1b5e35c793201895f338e2b25430465721c0ee9c",
+                "rpcPort": 8025
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xD91E690F4dc3e9dea434033d7F20A6149117cD71",
+        "private_key": "0xcf2be2c8f3190dd101f29ae3b1fd58b6e948406b3529ea21a9a4b7ee20e94531"
+    }
+}

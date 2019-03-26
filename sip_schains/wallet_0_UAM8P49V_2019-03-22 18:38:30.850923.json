@@ -1,0 +1,40 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "UAM8P49V",
+            "owner": "0x2eBf4bced59B9426ab228048c7Efed1082602A7e",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 31622400,
+            "startDate": 1553272698,
+            "deposit": 1000000000000000000,
+            "index": 0
+        },
+        "schain_nodes": [
+            {
+                "schainIndex": 0,
+                "nodeID": 3,
+                "ip": "134.209.52.242",
+                "basePort": 8000,
+                "publicKey": "a6334a5256af502d149fb0bd7ed133ac8f8267a65765b93e124c0c3be980b02d20dfbb55fd14f0832bc8a356760e2cfbe6d9cffd799ce65323cc6ac35c3a8d04",
+                "publicIP": "134.209.52.242",
+                "owner": "0x86dc8111cb7f3b164524aae075e742ba576c562c",
+                "rpcPort": 8003
+            },
+            {
+                "schainIndex": 1,
+                "nodeID": 4,
+                "ip": "134.209.52.88",
+                "basePort": 8000,
+                "publicKey": "cecb49ed9c197c8f79b8a422abc19b4a3297c9d1dae1351c42c04311586b45a34dd643c56db4f7ea83160967cfb81380b72f4f8695057491425c04d8c41a8c8f",
+                "publicIP": "134.209.52.88",
+                "owner": "0x44e59c4f7b719343d433e829dc7b3b0440577cc1",
+                "rpcPort": 8003
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x2eBf4bced59B9426ab228048c7Efed1082602A7e",
+        "private_key": "0xcf3fdf3b38b54b8f3463bb75b0b2765d2c6edfe91d5e53f842c1357bdd339fdd"
+    }
+}

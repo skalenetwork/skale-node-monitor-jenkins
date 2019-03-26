@@ -1,0 +1,40 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "YB28YN76",
+            "owner": "0xCbD3833f696f3D50d9a2266eFE514E0807898c30",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 31622400,
+            "startDate": 1551963621,
+            "deposit": 1000000000000000000,
+            "index": 1
+        },
+        "schain_nodes": [
+            {
+                "schainIndex": 0,
+                "nodeID": 5,
+                "ip": "104.248.242.122",
+                "basePort": 8000,
+                "publicKey": "6c4b130d66b9e7b27090ae078eeecbb2d57fbec1daaa5c04b551d69b90ed4b718a18302634910cf37f1f3bc7db46dac058b82c9db17f4feeafbbb6365669931a",
+                "publicIP": "104.248.242.122",
+                "owner": "0x42161f8a9220be8c59ce38cdf20db8c819871449",
+                "rpcPort": 8003
+            },
+            {
+                "schainIndex": 1,
+                "nodeID": 6,
+                "ip": "104.248.242.131",
+                "basePort": 8000,
+                "publicKey": "44db5f7f59be3ab688c09bf4eda3976193db10d00cee9e0e76c6419f0a775068585c2e521f5db65596ee8c116cafb4c93092e7dba6f1ea734565d825a7bc0d2d",
+                "publicIP": "104.248.242.131",
+                "owner": "0xc8cbc1151dce668c5638f78919cf9ba320625df8",
+                "rpcPort": 8003
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xCbD3833f696f3D50d9a2266eFE514E0807898c30",
+        "private_key": "0x828146b3a9105a3e8db44247105ef4e16ee0f15146a7884fc9859e7f03f93ecd"
+    }
+}
