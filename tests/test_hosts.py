@@ -6,7 +6,7 @@ import os
 def get_nodes():
 
     target = os.environ.get('TARGET')
-    file_path = target + "_schains.json"
+    file_path = "data/" + target + "_schains.json"
     try:
         print("Reading nodes data...")
         with open(file_path) as json_file:

@@ -3,8 +3,8 @@ import json
 import pytest
 from web3 import Web3, HTTPProvider
 
-
-directory = "tests/paris_schains"
+target = os.environ.get('TARGET')
+directory = "data/" + target + "_schains"
 files = os.listdir(directory)
 # print(files)
 
