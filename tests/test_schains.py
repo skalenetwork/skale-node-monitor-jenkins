@@ -44,7 +44,7 @@ def test(schain):
         assert block_number >= 0
         name = schain['name']
         blocks_obj[addr] = block_number
-        if blocks:
+        if blocks.get(name):
             print(block_number)
             print(blocks[name][addr])
             is_block_growing = block_number > blocks[name][addr]
