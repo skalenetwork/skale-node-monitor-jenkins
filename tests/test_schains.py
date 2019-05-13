@@ -3,13 +3,15 @@ import json
 import pytest
 from web3 import Web3, HTTPProvider
 
+OMITTED_IPS = []
+OMITTED_SCHAINES = ['QAHIX5SL']
 target = os.environ.get('TARGET')
 DATA_DIR = "data"
 SCHAINS_DIR = target + "_schains"
 directory = os.path.join(DATA_DIR, SCHAINS_DIR)
 files = os.listdir(directory)
-BLOCK_FILE = target + "_blocks.json"
-BLOCK_FILE_PATH = os.path.join(DATA_DIR, BLOCK_FILE)
+BLOCKS_FILE = target + "_blocks.json"
+BLOCKS_FILE_PATH = os.path.join(DATA_DIR, BLOCKS_FILE)
 schains = []
 
 for file in files:
@@ -17,15 +19,17 @@ for file in files:
         data = json.load(json_file)
     schain_name = data['schain_info']['schain_struct']['name']
     addrs = ["http://" + node['ip'] + ":" + str(node['rpcPort']) for node in data['schain_info']['schain_nodes']]
-    schains.append({'name': schain_name, 'addresses': addrs})
+    if schain_name not in OMITTED_SCHAINES:
+        schains.append({'name': schain_name, 'addresses': addrs})
+print(f's-chains (len = {len(schains)}) = {schains}')
 
 
 @pytest.mark.parametrize("schain", schains)
 def test(schain):
     name = schain['name']
     print(f'\nTesting {name}, {schain["addresses"]}')
-    if os.path.exists(BLOCK_FILE_PATH):
-        with open(BLOCK_FILE_PATH) as json_file:
+    if os.path.exists(BLOCKS_FILE_PATH):
+        with open(BLOCKS_FILE_PATH) as json_file:
             blocks = json.load(json_file)
     else:
         print(f'File with previous results doesn\'t exist!')
@@ -47,5 +51,5 @@ def test(schain):
 
     print('Saving block numbers to file...')
     blocks[name] = blocks_obj
-    with open(BLOCK_FILE_PATH, "w") as write_file:
+    with open(BLOCKS_FILE_PATH, "w") as write_file:
         json.dump(blocks, write_file)
