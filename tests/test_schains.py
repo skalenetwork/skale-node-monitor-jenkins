@@ -3,23 +3,33 @@ import json
 import pytest
 from web3 import Web3, HTTPProvider
 
-OMITTED_IPS = []
-OMITTED_SCHAINES = ['QAHIX5SL']
 target = os.environ.get('TARGET')
 DATA_DIR = "data"
 SCHAINS_DIR = target + "_schains"
-directory = os.path.join(DATA_DIR, SCHAINS_DIR)
-files = os.listdir(directory)
+SCHAINS_DIR_PATH = os.path.join(DATA_DIR, SCHAINS_DIR)
 BLOCKS_FILE = target + "_blocks.json"
+BAD_IPS_FILE = target + "_exceptions.json"
 BLOCKS_FILE_PATH = os.path.join(DATA_DIR, BLOCKS_FILE)
+BAD_IPS_FILE_PATH = os.path.join(DATA_DIR, BAD_IPS_FILE)
+
 schains = []
 
+with open(BAD_IPS_FILE_PATH) as json_file:
+    data = json.load(json_file)
+bad_ips = data["ips"]
+bad_schains = data["schains"]
+print(f'bad ips = {bad_ips}')
+print(f'bad schains = {bad_schains}')
+
+files = os.listdir(SCHAINS_DIR_PATH)
 for file in files:
-    with open(directory + "/" + file) as json_file:
+    with open(os.path.join(SCHAINS_DIR_PATH, file)) as json_file:
         data = json.load(json_file)
+
     schain_name = data['schain_info']['schain_struct']['name']
-    addrs = ["http://" + node['ip'] + ":" + str(node['rpcPort']) for node in data['schain_info']['schain_nodes']]
-    if schain_name not in OMITTED_SCHAINES:
+    addrs = ["http://" + node['ip'] + ":" + str(node['rpcPort']) if node['ip'] not in bad_ips else None
+             for node in data['schain_info']['schain_nodes']]
+    if schain_name not in bad_schains and not any(ip is None for ip in addrs):
         schains.append({'name': schain_name, 'addresses': addrs})
 print(f's-chains (len = {len(schains)}) = {schains}')
 
