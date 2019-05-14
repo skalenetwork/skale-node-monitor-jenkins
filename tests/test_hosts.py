@@ -2,16 +2,16 @@ import pytest
 import json
 import os
 
-DATA_DIR = "data"
+DATA_DIR = 'data'
 TARGET = os.environ.get('TARGET')
-NODES_FILE = TARGET + "_schains.json"
-NODES_FILE_PATH = os.path.join(DATA_DIR, NODES_FILE)
+NODES_FILE = 'nodes.json'
+NODES_FILE_PATH = os.path.join(DATA_DIR, TARGET, NODES_FILE)
 
 
-BAD_IPS_FILE = TARGET + "_exceptions.json"
-BAD_IPS_FILE_PATH = os.path.join(DATA_DIR, BAD_IPS_FILE)
+EXCEPTIONS_FILE = 'exceptions.json'
+EXCEPTIONS_FILE_PATH = os.path.join(DATA_DIR, TARGET, EXCEPTIONS_FILE)
 
-with open(BAD_IPS_FILE_PATH) as json_file:
+with open(EXCEPTIONS_FILE_PATH) as json_file:
     data = json.load(json_file)
 bad_ips = data["ips"]
 bad_schains = data["schains"]

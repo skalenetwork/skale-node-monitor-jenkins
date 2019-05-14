@@ -3,18 +3,22 @@ import json
 import pytest
 from web3 import Web3, HTTPProvider
 
-target = os.environ.get('TARGET')
-DATA_DIR = "data"
-SCHAINS_DIR = target + "_schains"
+BASE_DATA_DIR = "data"
+TARGET = os.environ.get('TARGET')
+DATA_DIR = os.path.join(BASE_DATA_DIR, TARGET)
+SCHAINS_DIR = "schains"
 SCHAINS_DIR_PATH = os.path.join(DATA_DIR, SCHAINS_DIR)
-BLOCKS_FILE = target + "_blocks.json"
-BAD_IPS_FILE = target + "_exceptions.json"
+
+BLOCKS_FILE = "blocks.json"
 BLOCKS_FILE_PATH = os.path.join(DATA_DIR, BLOCKS_FILE)
-BAD_IPS_FILE_PATH = os.path.join(DATA_DIR, BAD_IPS_FILE)
+
+EXCEPTIONS_FILE = 'exceptions.json'
+EXCEPTIONS_FILE_PATH = os.path.join(DATA_DIR, EXCEPTIONS_FILE)
+
 
 schains = []
 
-with open(BAD_IPS_FILE_PATH) as json_file:
+with open(EXCEPTIONS_FILE_PATH) as json_file:
     data = json.load(json_file)
 bad_ips = data["ips"]
 bad_schains = data["schains"]
