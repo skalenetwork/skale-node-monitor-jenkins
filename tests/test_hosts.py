@@ -56,9 +56,9 @@ print(testinfra_hosts)
 def test_docker_containers_are_running(host):
     ip = host.backend.host.name
     schain_prefix = "skale_schain_"
-    schain_conts = [schain_prefix + node for node in nodes[ip]]
+    schain_conts = [schain_prefix + schain_name for schain_name in nodes[ip] if schain_name not in bad_schains]
     ktm_prefix = "skale_ktm_"
-    ktm_conts = [ktm_prefix + node for node in nodes[ip]]
+    ktm_conts = [ktm_prefix + schain_name for schain_name in nodes[ip] if schain_name not in bad_schains]
 
     admin_cont = "skale_admin"
 
