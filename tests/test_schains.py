@@ -31,7 +31,7 @@ for file in files:
         data = json.load(json_file)
 
     schain_name = data['schain_info']['schain_struct']['name']
-    addrs = ["http://" + node['ip'] + ":" + str(node['rpcPort']) if node['ip'] not in bad_ips else None
+    addrs = ["http://" + node['ip'] + ":" + str(node['httpRpcPort']) if node['ip'] not in bad_ips else None
              for node in data['schain_info']['schain_nodes']]
     if schain_name not in bad_schains and not any(ip is None for ip in addrs):
         schains.append({'name': schain_name, 'addresses': addrs})
