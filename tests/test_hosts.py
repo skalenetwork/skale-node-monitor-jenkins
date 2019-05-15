@@ -2,14 +2,28 @@ import pytest
 import json
 import os
 
+DATA_DIR = 'data'
+TARGET = os.environ.get('TARGET')
+NODES_FILE = 'nodes.json'
+NODES_FILE_PATH = os.path.join(DATA_DIR, TARGET, NODES_FILE)
+
+
+EXCEPTIONS_FILE = 'exceptions.json'
+EXCEPTIONS_FILE_PATH = os.path.join(DATA_DIR, TARGET, EXCEPTIONS_FILE)
+
+with open(EXCEPTIONS_FILE_PATH) as json_file:
+    data = json.load(json_file)
+bad_ips = data["ips"]
+bad_schains = data["schains"]
+print(f'bad ips = {bad_ips}')
+print(f'bad schains = {bad_schains}')
+
 
 def get_nodes():
 
-    target = os.environ.get('TARGET')
-    file_path = "data/" + target + "_schains.json"
     try:
         print("Reading nodes data...")
-        with open(file_path) as json_file:
+        with open(NODES_FILE_PATH) as json_file:
             data = json.load(json_file)
         return data  # {"array":
     except KeyError as err:
@@ -28,9 +42,12 @@ for node in get_nodes():
     schains = [schain["name"] for schain in node["schains"]]
     nodes[node["node"]["ip"]] = schains
 
+print(f'nodes ({len(nodes)}) = {nodes}')
+
 prefix = "paramiko://root@"
 
-ips = [node for node in nodes]
+ips = [node for node in nodes if node not in bad_ips]
+print(ips)
 testinfra_hosts = [prefix + ip for ip in ips]
 print(testinfra_hosts)
 
@@ -39,9 +56,9 @@ print(testinfra_hosts)
 def test_docker_containers_are_running(host):
     ip = host.backend.host.name
     schain_prefix = "skale_schain_"
-    schain_conts = [schain_prefix + node for node in nodes[ip]]
+    schain_conts = [schain_prefix + schain_name for schain_name in nodes[ip] if schain_name not in bad_schains]
     ktm_prefix = "skale_ktm_"
-    ktm_conts = [ktm_prefix + node for node in nodes[ip]]
+    ktm_conts = [ktm_prefix + schain_name for schain_name in nodes[ip] if schain_name not in bad_schains]
 
     admin_cont = "skale_admin"
 
