@@ -1,0 +1,48 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "CFQ0K33V",
+            "owner": "0x64Dd8f713F11B24Ab1b786460B86B6e38d35A2CB",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 31622400,
+            "startDate": 1558121860,
+            "deposit": 1000000000000000000,
+            "index": 6
+        },
+        "schain_nodes": [
+            {
+                "nodeId": 0,
+                "nodeName": "Zh0QZmY2fcIlf",
+                "basePort": 8022,
+                "httpRpcPort": 8024,
+                "httpsRpcPort": 8029,
+                "wsRpcPort": 8025,
+                "wssRpcPort": 8030,
+                "publicKey": "4898553e90b216c6f038a8bc177f97e86ca85c22df8f4ce0cb050d541b6745662052954889afaa977d0e1874dd5534ea9df214d9df3679359daa564df15af543",
+                "owner": "0x13f9cedfe24462b06fc47cda4e78a352f7c1b86f",
+                "schainIndex": 0,
+                "ip": "157.230.154.0",
+                "publicIp": "157.230.154.0"
+            },
+            {
+                "nodeId": 1,
+                "nodeName": "JqTgXN56HIc7A",
+                "basePort": 8000,
+                "httpRpcPort": 8002,
+                "httpsRpcPort": 8007,
+                "wsRpcPort": 8003,
+                "wssRpcPort": 8008,
+                "publicKey": "d23f82fa5216818dc61506e5b8634cec50ef39e65cb537ab06da3e4541bafa2c4ef507bf0b3e58a081a5da4ac2adc397da9495e9787ec6438db0daf446bf3a82",
+                "owner": "0x696d651a3bf4ed429240cd903b30ed5e6179631c",
+                "schainIndex": 1,
+                "ip": "104.248.215.51",
+                "publicIp": "104.248.215.51"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x64Dd8f713F11B24Ab1b786460B86B6e38d35A2CB",
+        "private_key": "0x12d03ec57f656dd8480f14aeac12e5f756b2960f66bcd40f9d0bfd85f7bb0145"
+    }
+}
