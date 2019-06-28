@@ -40,21 +40,21 @@ for file in files:
 print(f's-chains (len = {len(schains)}) = {schains}')
 
 
-# @pytest.mark.parametrize("schain", schains)
-# def test_ping(schain):
-#     name = schain['name']
-#
-#     print(f'\nPinging {name}, {schain["ips"]}')
-#     for ip in schain['ips']:
-#         print(f'IP = {ip}')
-#         response = os.system("ping -c 1 " + ip)
-#         assert response == 0
+@pytest.mark.parametrize("schain", schains)
+def test_ping(schain):
+    name = schain['name']
 
-@pytest.mark.parametrize("ip", [schain["ips"] for schain in schains])
-def test_ping(ip):
-    print(f' ip = {ip}')
-    response = os.system("ping -c 1 " + ip)
-    assert response == 0
+    print(f'\nPinging {name}, {schain["ips"]}')
+    for ip in schain['ips']:
+        print(f'IP = {ip}')
+        response = os.system("ping -c 1 " + ip)
+        assert response == 0
+
+# @pytest.mark.parametrize("ip", [schain["ips"] for schain in schains])
+# def test_ping(ip):
+#     print(f' ip = {ip}')
+#     response = os.system("ping -c 1 " + ip)
+#     assert response == 0
 
 
 @pytest.mark.parametrize("schain", schains)
