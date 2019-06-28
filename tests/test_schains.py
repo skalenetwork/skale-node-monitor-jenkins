@@ -31,17 +31,37 @@ for file in files:
         data = json.load(json_file)
 
     schain_name = data['schain_info']['schain_struct']['name']
+    ips = [node['ip'] if node['ip'] not in bad_ips else None for node in data['schain_info']['schain_nodes']]
+
     addrs = ["http://" + node['ip'] + ":" + str(node['httpRpcPort']) if node['ip'] not in bad_ips else None
              for node in data['schain_info']['schain_nodes']]
     if schain_name not in bad_schains and not any(ip is None for ip in addrs):
-        schains.append({'name': schain_name, 'addresses': addrs})
+        schains.append({'name': schain_name, 'ips': ips, 'addresses': addrs})
 print(f's-chains (len = {len(schains)}) = {schains}')
 
 
+# @pytest.mark.parametrize("schain", schains)
+# def test_ping(schain):
+#     name = schain['name']
+#
+#     print(f'\nPinging {name}, {schain["ips"]}')
+#     for ip in schain['ips']:
+#         print(f'IP = {ip}')
+#         response = os.system("ping -c 1 " + ip)
+#         assert response == 0
+
+@pytest.mark.parametrize("ip", [schain["ips"] for schain in schains])
+def test_ping(ip):
+    print(f' ip = {ip}')
+    response = os.system("ping -c 1 " + ip)
+    assert response == 0
+
+
 @pytest.mark.parametrize("schain", schains)
-def test(schain):
+def test_schains(schain):
     name = schain['name']
-    print(f'\nTesting {name}, {schain["addresses"]}')
+
+    print(f'\nChecking {name}, {schain["addresses"]}')
     if os.path.exists(BLOCKS_FILE_PATH):
         with open(BLOCKS_FILE_PATH) as json_file:
             blocks = json.load(json_file)
