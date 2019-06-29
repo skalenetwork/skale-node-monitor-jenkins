@@ -84,8 +84,8 @@ def test_disk_space(host):
 
 @pytest.mark.filterwarnings('ignore')
 def test_memory(host):
-    mem_min_limit = 1024  # in MB
+    mem_min_limit = 400  # in MB
     memory_usage = host.check_output("free -m").split('\n')[1].split()
 
     print(f"Memory free: {memory_usage[3]} buff/cache: {memory_usage[5]}")
-    assert int(memory_usage[3]) + int(memory_usage[5]) > 512, "Memory should be more than {}".format(mem_min_limit)
+    assert int(memory_usage[3]) + int(memory_usage[5]) > mem_min_limit, "Memory should be more than {}".format(mem_min_limit)
