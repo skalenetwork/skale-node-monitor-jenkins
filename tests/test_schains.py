@@ -31,59 +31,54 @@ for file in files:
         data = json.load(json_file)
 
     schain_name = data['schain_info']['schain_struct']['name']
-    ips = [node['ip'] if node['ip'] not in bad_ips else None for node in data['schain_info']['schain_nodes']]
+    if schain_name not in bad_schains:
+        for snode in data['schain_info']['schain_nodes']:
+            if snode['ip'] not in bad_ips:
+                schains.append({'name': schain_name, 'ip': snode['ip'], 'httpRpcPort': snode['httpRpcPort']})
 
-    addrs = ["http://" + node['ip'] + ":" + str(node['httpRpcPort']) if node['ip'] not in bad_ips else None
-             for node in data['schain_info']['schain_nodes']]
-    if schain_name not in bad_schains and not any(ip is None for ip in addrs):
-        schains.append({'name': schain_name, 'ips': ips, 'addresses': addrs})
-print(f's-chains (len = {len(schains)}) = {schains}')
+print(f's-chains for test(len = {len(schains)}): {schains}')
 
-
+@pytest.mark.skip(reason="temorarily skip")
 @pytest.mark.parametrize("schain", schains)
 def test_ping(schain):
-    name = schain['name']
-
-    print(f'\nPinging {name}, {schain["ips"]}')
-    for ip in schain['ips']:
-        print(f'IP = {ip}')
-        response = os.system("ping -c 1 " + ip)
-        assert response == 0
-
-# @pytest.mark.parametrize("ip", [schain["ips"] for schain in schains])
-# def test_ping(ip):
-#     print(f' ip = {ip}')
-#     response = os.system("ping -c 1 " + ip)
-#     assert response == 0
+    ip = schain['ip']
+    print(f'\nschain = {schain}')
+    response = os.system("ping -c 1 " + ip)
+    assert response == 0
 
 
 @pytest.mark.parametrize("schain", schains)
 def test_schains(schain):
     name = schain['name']
-
-    print(f'\nChecking {name}, {schain["addresses"]}')
+    ip = schain['ip']
+    addr = "http://" + ip + ":" + str(schain['httpRpcPort'])
+    print(f'\nChecking {name}, {addr}')
     if os.path.exists(BLOCKS_FILE_PATH):
         with open(BLOCKS_FILE_PATH) as json_file:
             blocks = json.load(json_file)
     else:
         print(f'File with previous results doesn\'t exist!')
         blocks = {}
-    blocks_obj = {}
-    for addr in schain['addresses']:
-        print(f'Endpoint = {addr}')
-        web3 = Web3(HTTPProvider(addr))
-        block_number = web3.eth.blockNumber
-        print(f"Current block number = {block_number}")
-        assert block_number >= 0
 
-        blocks_obj[addr] = block_number
-        if blocks.get(name):
-            print(f'Previous block number = {blocks[name][addr]}')
-            is_block_growing = block_number > blocks[name][addr]
-            print(f'Growing is {is_block_growing}')
-            assert is_block_growing
+    response = os.system("ping -c 1 " + ip)
+    assert response == 0
 
-    print('Saving block numbers to file...')
-    blocks[name] = blocks_obj
+    block_obj = {}
+    web3 = Web3(HTTPProvider(addr))
+    block_number = web3.eth.blockNumber
+    print(f"Current block number = {block_number}")
+    assert block_number >= 0
+
+    block_obj['name'] = name
+    block_obj['block'] = block_number
+    if blocks.get(addr):
+        print(f'Previous block number = {blocks[addr]["block"]}')
+        is_block_growing = block_number > blocks[addr]['block']
+        print(f'Growing is {is_block_growing}')
+        assert is_block_growing
+
+    print('Saving block number to file...')
+    blocks[addr] = block_obj
     with open(BLOCKS_FILE_PATH, "w") as write_file:
         json.dump(blocks, write_file)
+
