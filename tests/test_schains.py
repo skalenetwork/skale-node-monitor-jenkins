@@ -38,14 +38,6 @@ for file in files:
 
 print(f's-chains for test(len = {len(schains)}): {schains}')
 
-@pytest.mark.skip(reason="temorarily skip")
-@pytest.mark.parametrize("schain", schains)
-def test_ping(schain):
-    ip = schain['ip']
-    print(f'\nschain = {schain}')
-    response = os.system("ping -c 1 " + ip)
-    assert response == 0
-
 
 @pytest.mark.parametrize("schain", schains)
 def test_schains(schain):
@@ -53,15 +45,16 @@ def test_schains(schain):
     ip = schain['ip']
     addr = "http://" + ip + ":" + str(schain['httpRpcPort'])
     print(f'\nChecking {name}, {addr}')
+
+    response = os.system("ping -c 1 " + ip)
+    assert response == 0
+
     if os.path.exists(BLOCKS_FILE_PATH):
         with open(BLOCKS_FILE_PATH) as json_file:
             blocks = json.load(json_file)
     else:
         print(f'File with previous results doesn\'t exist!')
         blocks = {}
-
-    response = os.system("ping -c 1 " + ip)
-    assert response == 0
 
     block_obj = {}
     web3 = Web3(HTTPProvider(addr))
