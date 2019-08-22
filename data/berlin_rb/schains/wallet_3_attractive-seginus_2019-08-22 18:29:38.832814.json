@@ -1,0 +1,58 @@
+{
+    "wallet": {
+        "private_key": "0x491956b30ecdc2535ba26ddc30697bf39b7c17908fc7d123c4cd638c4ea8fdc9",
+        "address": "0x229632234A48A1efB2c353Af9C0701898D8c28fB"
+    },
+    "schain_info": {
+        "schain_nodes": [
+            {
+                "schainIndex": 1,
+                "httpsRpcPort": 10040,
+                "wsRpcPort": 10036,
+                "ip": "165.22.137.3",
+                "nodeID": 0,
+                "publicIP": "165.22.137.3",
+                "publicKey": "0073e0ae5203d5898923b64b7847db283565f9ffae2a8dd5c69e2e9836d56995a7ec7c8c0b917745eb713047d7dddb4fccf1c89f2e3dd642cbeff66cbf4840d7",
+                "link": "ethberlin01.skalenodes.com",
+                "owner": "0xdd1236bd4d9f330e48d5ff2dae7ccbfc989b86cf",
+                "wssRpcPort": 10041,
+                "basePort": 10033,
+                "httpRpcPort": 10035,
+                "nodeName": "eth-berlin-rinkeby-0",
+                "https_url": "https://ethberlin01.skalenodes.com:10040",
+                "wss_url": "wss://ethberlin01.skalenodes.com:10041",
+                "http_url": "http://ethberlin01.skalenodes.com:10035",
+                "ws_url": "ws://ethberlin01.skalenodes.com:10036"
+            },
+            {
+                "schainIndex": 2,
+                "httpsRpcPort": 10040,
+                "wsRpcPort": 10036,
+                "ip": "68.183.165.161",
+                "nodeID": 1,
+                "publicIP": "68.183.165.161",
+                "publicKey": "ef448e58c297a9e441ca43cf040ecae4984af41e135a0fdc15e18cefa73f3cb2f380697ac73b9763e1a25e65fd23ca90f5b4558cc70af5fa48e4e68545adcb59",
+                "link": "ethberlin02.skalenodes.com",
+                "owner": "0x511210391930a841e03dc394b9baaadf5cc0d8ad",
+                "wssRpcPort": 10041,
+                "basePort": 10033,
+                "httpRpcPort": 10035,
+                "nodeName": "eth-berlin-rinkeby-1",
+                "https_url": "https://ethberlin02.skalenodes.com:10040",
+                "wss_url": "wss://ethberlin02.skalenodes.com:10041",
+                "http_url": "http://ethberlin02.skalenodes.com:10035",
+                "ws_url": "ws://ethberlin02.skalenodes.com:10036"
+            }
+        ],
+        "schain_struct": {
+            "startDate": 1566487771,
+            "name": "attractive-seginus",
+            "index": 3,
+            "deposit": 1000000000000000000,
+            "partOfNode": 0,
+            "owner": "0x229632234A48A1efB2c353Af9C0701898D8c28fB",
+            "lifetime": 31622400,
+            "indexInOwnerList": 0
+        }
+    }
+}
