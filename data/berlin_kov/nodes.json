@@ -1,0 +1,164 @@
+[
+  {
+    "schains": [
+      {
+        "name": "howling-kraz",
+        "owner": "0x168FA7411bE20EeA8509beca31DBaA3275E2e6A9",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566493972,
+        "deposit": 1000000000000000000,
+        "index": 0
+      },
+      {
+        "name": "raspy-alkalurops",
+        "owner": "0x9Bf28Ce2Dc6e0145FF01dcc0F2cF4DD2A0718a0b",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566493991,
+        "deposit": 1000000000000000000,
+        "index": 1
+      },
+      {
+        "name": "plump-spica",
+        "owner": "0xC9d0b5b3Fc72a7d6D495BD896063AAa607b8Cfc6",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494012,
+        "deposit": 1000000000000000000,
+        "index": 2
+      },
+      {
+        "name": "echoing-mizar",
+        "owner": "0x89eE17aF4de3e28001721642248581D789FE825a",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494028,
+        "deposit": 1000000000000000000,
+        "index": 3
+      },
+      {
+        "name": "dazzling-adara",
+        "owner": "0x742c63F920604c61918818C122e426EA288900Ed",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494049,
+        "deposit": 1000000000000000000,
+        "index": 4
+      },
+      {
+        "name": "quiet-alula-australis",
+        "owner": "0x766723e0303a72F6162d36F59C669B6f40850a33",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494065,
+        "deposit": 1000000000000000000,
+        "index": 5
+      },
+      {
+        "name": "tinkling-alterf",
+        "owner": "0x06069DcC1cd1Fa504CaDe5473d390F8fE1d864E3",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494087,
+        "deposit": 1000000000000000000,
+        "index": 6
+      }
+    ],
+    "amount": 7,
+    "node": {
+      "name": "eth-berlin-kovan-1",
+      "ip": "68.183.174.174",
+      "basePort": 10000,
+      "publicIP": "68.183.174.174"
+    }
+  },
+  {
+    "schains": [
+      {
+        "name": "howling-kraz",
+        "owner": "0x168FA7411bE20EeA8509beca31DBaA3275E2e6A9",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566493972,
+        "deposit": 1000000000000000000,
+        "index": 0
+      },
+      {
+        "name": "raspy-alkalurops",
+        "owner": "0x9Bf28Ce2Dc6e0145FF01dcc0F2cF4DD2A0718a0b",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566493991,
+        "deposit": 1000000000000000000,
+        "index": 1
+      },
+      {
+        "name": "plump-spica",
+        "owner": "0xC9d0b5b3Fc72a7d6D495BD896063AAa607b8Cfc6",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494012,
+        "deposit": 1000000000000000000,
+        "index": 2
+      },
+      {
+        "name": "echoing-mizar",
+        "owner": "0x89eE17aF4de3e28001721642248581D789FE825a",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494028,
+        "deposit": 1000000000000000000,
+        "index": 3
+      },
+      {
+        "name": "dazzling-adara",
+        "owner": "0x742c63F920604c61918818C122e426EA288900Ed",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494049,
+        "deposit": 1000000000000000000,
+        "index": 4
+      },
+      {
+        "name": "quiet-alula-australis",
+        "owner": "0x766723e0303a72F6162d36F59C669B6f40850a33",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494065,
+        "deposit": 1000000000000000000,
+        "index": 5
+      },
+      {
+        "name": "tinkling-alterf",
+        "owner": "0x06069DcC1cd1Fa504CaDe5473d390F8fE1d864E3",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 31622400,
+        "startDate": 1566494087,
+        "deposit": 1000000000000000000,
+        "index": 6
+      }
+    ],
+    "amount": 7,
+    "node": {
+      "name": "eth-berlin-kovan-0",
+      "ip": "68.183.174.177",
+      "basePort": 10000,
+      "publicIP": "68.183.174.177"
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "howling-kraz",
+            "owner": "0x168FA7411bE20EeA8509beca31DBaA3275E2e6A9",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 31622400,
+            "startDate": 1566493972,
+            "deposit": 1000000000000000000,
+            "index": 0
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 1,
+                "nodeName": "eth-berlin-kovan-0",
+                "basePort": 10000,
+                "httpRpcPort": 10002,
+                "httpsRpcPort": 10007,
+                "wsRpcPort": 10003,
+                "wssRpcPort": 10008,
+                "publicKey": "93f0db68ffa0b978162dcd20f348ba6191df6ef5b1d34f45c3c83ec49d234a0e46b8c486326ff3ea1c0be5f8ff79c4c4110adba33539237f847cba66622c3a5b",
+                "owner": "0xe27cf8595cd11aa859b344789ac7e3c18e2a52bb",
+                "schainIndex": 1,
+                "ip": "68.183.174.177",
+                "publicIP": "68.183.174.177",
+                "link": "ethberlin03.skalenodes.com",
+                "https_url": "https://ethberlin03.skalenodes.com:10007",
+                "wss_url": "wss://ethberlin03.skalenodes.com:10008",
+                "http_url": "http://ethberlin03.skalenodes.com:10002",
+                "ws_url": "ws://ethberlin03.skalenodes.com:10003"
+            },
+            {
+                "nodeID": 0,
+                "nodeName": "eth-berlin-kovan-1",
+                "basePort": 10000,
+                "httpRpcPort": 10002,
+                "httpsRpcPort": 10007,
+                "wsRpcPort": 10003,
+                "wssRpcPort": 10008,
+                "publicKey": "4c75fcaa516c1fd7cc8ea76f56851cd20d708b2ba432b0e1d30df927f5c86d18d3f2b174b001c7caca0ccdd65363e4f14f9c13af838fb35ea91f13e1ecef699a",
+                "owner": "0x1db58ec08d54913ece9f8409f6feba91d38c051c",
+                "schainIndex": 2,
+                "ip": "68.183.174.174",
+                "publicIP": "68.183.174.174",
+                "link": "ethberlin04.skalenodes.com",
+                "https_url": "https://ethberlin04.skalenodes.com:10007",
+                "wss_url": "wss://ethberlin04.skalenodes.com:10008",
+                "http_url": "http://ethberlin04.skalenodes.com:10002",
+                "ws_url": "ws://ethberlin04.skalenodes.com:10003"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x168FA7411bE20EeA8509beca31DBaA3275E2e6A9",
+        "private_key": "0x7fabf7f8c58ac1db03fc4bea2736daf14a23a4a7461d28d185af53f0acff2aaf"
+    }
+}
