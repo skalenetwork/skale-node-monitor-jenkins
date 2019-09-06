@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "purring-regulus",
+            "owner": "0x3DA14299A4591D42562F4fE756Ba7498bb803A8f",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 31622400,
+            "startDate": 1567010308,
+            "deposit": 1000000000000000000,
+            "index": 18
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 3,
+                "nodeName": "gitcoin-rinkeby-1",
+                "basePort": 10154,
+                "httpRpcPort": 10156,
+                "httpsRpcPort": 10161,
+                "wsRpcPort": 10157,
+                "wssRpcPort": 10162,
+                "publicKey": "3cd3240cf64794e8afd0963e778634a5cd6923a6f01653fd5c7e917d1f00306f237feb093f1f205a0e9b20134e01fefba6e37f3e49eb6ecb459ad875dc059936",
+                "owner": "0xde7c2de5cac2ad3c414aea6533fa1fdb394e5c19",
+                "schainIndex": 1,
+                "ip": "157.230.205.189",
+                "publicIP": "157.230.205.189",
+                "link": "gc1.skalenodes.com",
+                "https_url": "https://gc1.skalenodes.com:10161",
+                "wss_url": "wss://gc1.skalenodes.com:10162",
+                "http_url": "http://gc1.skalenodes.com:10156",
+                "ws_url": "ws://gc1.skalenodes.com:10157"
+            },
+            {
+                "nodeID": 2,
+                "nodeName": "gitcoin-rinkeby-0",
+                "basePort": 10099,
+                "httpRpcPort": 10101,
+                "httpsRpcPort": 10106,
+                "wsRpcPort": 10102,
+                "wssRpcPort": 10107,
+                "publicKey": "60b52b23447c6aed79b765c5a67ac417ad63c3cb6ef242ac9c69b5e4fe07bfa17298d1efaa052d5efa78e00c7d2aa33eae22606dda647072eeb0da64ea140fa0",
+                "owner": "0x2f0c117c8eb5400353ce77c204f82e0b0d3f64b4",
+                "schainIndex": 2,
+                "ip": "134.209.7.59",
+                "publicIP": "134.209.7.59",
+                "link": "gc0.skalenodes.com",
+                "https_url": "https://gc0.skalenodes.com:10106",
+                "wss_url": "wss://gc0.skalenodes.com:10107",
+                "http_url": "http://gc0.skalenodes.com:10101",
+                "ws_url": "ws://gc0.skalenodes.com:10102"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x3DA14299A4591D42562F4fE756Ba7498bb803A8f",
+        "private_key": "0xb06962edfde97d848548cb9e07206d008fe2cef565a6ae143f48fa33b052172f"
+    }
+}
