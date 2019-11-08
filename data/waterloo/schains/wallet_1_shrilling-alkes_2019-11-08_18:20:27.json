@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "shrilling-alkes",
+            "owner": "0xD942db699831FF7f6f5edBA7bd701ba7111E210A",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1573230021,
+            "deposit": 1000000000000000000,
+            "index": 1
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 1,
+                "nodeName": "ethwaterloo-0",
+                "basePort": 10011,
+                "httpRpcPort": 10013,
+                "httpsRpcPort": 10018,
+                "wsRpcPort": 10014,
+                "wssRpcPort": 10019,
+                "publicKey": "c4351eed22053ada3706d9ddd96a7249f37717d508c2f9220d52efd8621499f21364f06ac3d875173fcd78f85eb5da7cb5809dba5494be864fc743fa49164a7a",
+                "owner": "0x2427aea2b8a7f1516053cb4b7f055a6e4ddb4f2a",
+                "schainIndex": 1,
+                "ip": "157.245.168.97",
+                "publicIP": "157.245.168.97",
+                "link": "ethwaterloo0.skalenodes.com",
+                "https_url": "https://ethwaterloo0.skalenodes.com:10018",
+                "wss_url": "wss://ethwaterloo0.skalenodes.com:10019",
+                "http_url": "http://ethwaterloo0.skalenodes.com:10013",
+                "ws_url": "ws://ethwaterloo0.skalenodes.com:10014"
+            },
+            {
+                "nodeID": 0,
+                "nodeName": "ethwaterloo-1",
+                "basePort": 10011,
+                "httpRpcPort": 10013,
+                "httpsRpcPort": 10018,
+                "wsRpcPort": 10014,
+                "wssRpcPort": 10019,
+                "publicKey": "9e5bcff1baa1c4c164a71aa0958b0150cc35ef6738559b78171b7a05d0784b48dc08bc5cdfb8812a1ea4b4ff84eb23ee4a5b8dc83d76cb6c1425c7f22a37450c",
+                "owner": "0xe497636bd59e187d9d48dcfd96c3b7196d84a998",
+                "schainIndex": 2,
+                "ip": "167.172.196.224",
+                "publicIP": "167.172.196.224",
+                "link": "ethwaterloo1.skalenodes.com",
+                "https_url": "https://ethwaterloo1.skalenodes.com:10018",
+                "wss_url": "wss://ethwaterloo1.skalenodes.com:10019",
+                "http_url": "http://ethwaterloo1.skalenodes.com:10013",
+                "ws_url": "ws://ethwaterloo1.skalenodes.com:10014"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xD942db699831FF7f6f5edBA7bd701ba7111E210A",
+        "private_key": "0xba1f88022647b7e7c5b9f7465d83356e47f216eebc4d7a8b633537361c7f417c"
+    }
+}
