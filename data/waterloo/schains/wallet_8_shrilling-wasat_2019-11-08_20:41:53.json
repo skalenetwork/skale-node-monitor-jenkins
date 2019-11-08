@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "shrilling-wasat",
+            "owner": "0xDfb6CBD8217246c5E0a1dD025FD16c61d2a79907",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1573238502,
+            "deposit": 1000000000000000000,
+            "index": 8
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 1,
+                "nodeName": "ethwaterloo-res-1",
+                "basePort": 10088,
+                "httpRpcPort": 10090,
+                "httpsRpcPort": 10095,
+                "wsRpcPort": 10091,
+                "wssRpcPort": 10096,
+                "publicKey": "e03867b1e604ca7ed42f3a6c05143163e9bbf87c68c12d7bdbb9a7fab1566373e0dc4b2e2a08dc3fc8237dd950ff44360f3394583629b8629a3875b5011eff6d",
+                "owner": "0x2536bfa8de73cca7b56f7808ef08124ea96800d9",
+                "schainIndex": 1,
+                "ip": "167.71.146.206",
+                "publicIP": "167.71.146.206",
+                "link": "waterloo1.skalenodes.com",
+                "https_url": "https://waterloo1.skalenodes.com:10095",
+                "wss_url": "wss://waterloo1.skalenodes.com:10096",
+                "http_url": "http://waterloo1.skalenodes.com:10090",
+                "ws_url": "ws://waterloo1.skalenodes.com:10091"
+            },
+            {
+                "nodeID": 0,
+                "nodeName": "ethwaterloo-res-0",
+                "basePort": 10088,
+                "httpRpcPort": 10090,
+                "httpsRpcPort": 10095,
+                "wsRpcPort": 10091,
+                "wssRpcPort": 10096,
+                "publicKey": "0506c7a0caba7a398f3e611bca19914d51d92a8b4246aaf61ffbb0058d22101933efc7f1acef381994acd414582b3e687dc2ab37d5ac44b1fb6e4b4673c593e1",
+                "owner": "0x7fa0051fab8102970c98f864176daf2bdc6cf123",
+                "schainIndex": 2,
+                "ip": "157.245.227.208",
+                "publicIP": "157.245.227.208",
+                "link": "waterloo0.skalenodes.com",
+                "https_url": "https://waterloo0.skalenodes.com:10095",
+                "wss_url": "wss://waterloo0.skalenodes.com:10096",
+                "http_url": "http://waterloo0.skalenodes.com:10090",
+                "ws_url": "ws://waterloo0.skalenodes.com:10091"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xDfb6CBD8217246c5E0a1dD025FD16c61d2a79907",
+        "private_key": "0x5de939b3e4d7a8c4ed51a3032b220645e77c6c42c97ce3f0cbfb5869985e0ec5"
+    }
+}
