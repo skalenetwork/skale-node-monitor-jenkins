@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "handsome-dheneb",
+            "owner": "0xFB41B7Cb8d5BD3f96FBb85FbCDAc964f17dcF254",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1574444991,
+            "deposit": 1000000000000000000,
+            "index": 2
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 1,
+                "nodeName": "SIP2211-1",
+                "basePort": 10022,
+                "httpRpcPort": 10024,
+                "httpsRpcPort": 10029,
+                "wsRpcPort": 10025,
+                "wssRpcPort": 10030,
+                "publicKey": "79f611713a79d2ea3a8f5ae2ecf1ecf1c1c8f13cb742efc94752bd4736fef75ece17ed3f92420f1360b2d641f0d8843bf53808560ef4deebf3b556af3285303d",
+                "owner": "0x4b6f374b4735afc822075864fab2e3444cd3210f",
+                "schainIndex": 1,
+                "ip": "167.99.165.231",
+                "publicIP": "167.99.165.231",
+                "link": "sip2211-1.skalenodes.com",
+                "https_url": "https://sip2211-1.skalenodes.com:10029",
+                "wss_url": "wss://sip2211-1.skalenodes.com:10030",
+                "http_url": "http://sip2211-1.skalenodes.com:10024",
+                "ws_url": "ws://sip2211-1.skalenodes.com:10025"
+            },
+            {
+                "nodeID": 0,
+                "nodeName": "SIP2211-0",
+                "basePort": 10022,
+                "httpRpcPort": 10024,
+                "httpsRpcPort": 10029,
+                "wsRpcPort": 10025,
+                "wssRpcPort": 10030,
+                "publicKey": "220f03568eca51fea862bbb2fa9876db25346fc737fa62d45f6811edfff076127119960f2ee9dfeb40430676283bfbac9577f0ee445e1d1fc8f35bc77cfaf268",
+                "owner": "0x909a79ab5d6e069b9da4b2ceddfec443436950b1",
+                "schainIndex": 2,
+                "ip": "167.99.165.225",
+                "publicIP": "167.99.165.225",
+                "link": "sip2211-0.skalenodes.com",
+                "https_url": "https://sip2211-0.skalenodes.com:10029",
+                "wss_url": "wss://sip2211-0.skalenodes.com:10030",
+                "http_url": "http://sip2211-0.skalenodes.com:10024",
+                "ws_url": "ws://sip2211-0.skalenodes.com:10025"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xFB41B7Cb8d5BD3f96FBb85FbCDAc964f17dcF254",
+        "private_key": "0x27695e8ed5d6890f335378a1eed36ceef04d91acf0d72c1bd0b0d6a5fca87ca8"
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "shrilling-acubens",
+            "owner": "0x33D96f4539006527E5A4C1fAc52EF23CcbEf9454",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1574447094,
+            "deposit": 1000000000000000000,
+            "index": 26
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 1,
+                "nodeName": "SIP2211-1",
+                "basePort": 10286,
+                "httpRpcPort": 10288,
+                "httpsRpcPort": 10293,
+                "wsRpcPort": 10289,
+                "wssRpcPort": 10294,
+                "publicKey": "79f611713a79d2ea3a8f5ae2ecf1ecf1c1c8f13cb742efc94752bd4736fef75ece17ed3f92420f1360b2d641f0d8843bf53808560ef4deebf3b556af3285303d",
+                "owner": "0x4b6f374b4735afc822075864fab2e3444cd3210f",
+                "schainIndex": 1,
+                "ip": "167.99.165.231",
+                "publicIP": "167.99.165.231",
+                "link": "sip2211-1.skalenodes.com",
+                "https_url": "https://sip2211-1.skalenodes.com:10293",
+                "wss_url": "wss://sip2211-1.skalenodes.com:10294",
+                "http_url": "http://sip2211-1.skalenodes.com:10288",
+                "ws_url": "ws://sip2211-1.skalenodes.com:10289"
+            },
+            {
+                "nodeID": 0,
+                "nodeName": "SIP2211-0",
+                "basePort": 10286,
+                "httpRpcPort": 10288,
+                "httpsRpcPort": 10293,
+                "wsRpcPort": 10289,
+                "wssRpcPort": 10294,
+                "publicKey": "220f03568eca51fea862bbb2fa9876db25346fc737fa62d45f6811edfff076127119960f2ee9dfeb40430676283bfbac9577f0ee445e1d1fc8f35bc77cfaf268",
+                "owner": "0x909a79ab5d6e069b9da4b2ceddfec443436950b1",
+                "schainIndex": 2,
+                "ip": "167.99.165.225",
+                "publicIP": "167.99.165.225",
+                "link": "sip2211-0.skalenodes.com",
+                "https_url": "https://sip2211-0.skalenodes.com:10293",
+                "wss_url": "wss://sip2211-0.skalenodes.com:10294",
+                "http_url": "http://sip2211-0.skalenodes.com:10288",
+                "ws_url": "ws://sip2211-0.skalenodes.com:10289"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x33D96f4539006527E5A4C1fAc52EF23CcbEf9454",
+        "private_key": "0x75516d2f23696b4863c68ecc425202ce82703beaf2bde45e1c63fc825223b239"
+    }
+}
