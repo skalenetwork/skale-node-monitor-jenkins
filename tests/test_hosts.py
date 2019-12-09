@@ -1,8 +1,8 @@
-import pytest
+from dateutil.parser import parse
 import json
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import pytest
 
@@ -16,6 +16,8 @@ EXCEPTIONS_FILE = 'exceptions.json'
 EXCEPTIONS_FILE_PATH = os.path.join(DATA_DIR, TARGET, EXCEPTIONS_FILE)
 
 IMA_ERROR_TEXT = "Loop"
+CHECK_PERIOD = 10
+LINES_COUNT = 100
 
 
 with open(EXCEPTIONS_FILE_PATH) as json_file:
@@ -95,21 +97,27 @@ def test_ima_logs(host):
     err_count = 0
     now = datetime.utcnow()
     print(now)
+    prev_check_time = now - timedelta(minutes=CHECK_PERIOD)
+    print(f'Prev check time: {prev_check_time}')
     for cont in ktm_conts:
-        cmd = f'docker logs --tail 100 {cont} 2>&1| grep "{IMA_ERROR_TEXT}"'
+        cmd = f'docker logs --tail {LINES_COUNT} {cont} 2>&1| grep "{IMA_ERROR_TEXT}"'
         output_result = escape_ansi(host.check_output(cmd))
 
-        print(f"output: {output_result}")
+        # print(f"output: {output_result}")
         lines = output_result.splitlines()
         print(f"all lines: {lines}")
 
         print('line by line:')
         for line in lines:
             print(line)
+            cur_log_time = parse(line, fuzzy_with_tokens=True)[0]
+            print(f'extracted = {cur_log_time}')
+            if cur_log_time < prev_check_time:
+                break
+            if IMA_ERROR_TEXT in line:
+                print(f'Error in IMA {cont} on host {ip}')
+                err_count += 1
 
-        if IMA_ERROR_TEXT in output_result:
-            print(f'Error in IMA {cont} on host {ip}')
-            err_count += 1
     assert err_count == 0, "There are errors in IMA logs - in {} containers".format(err_count)
 
 
