@@ -17,8 +17,8 @@ EXCEPTIONS_FILE_PATH = os.path.join(DATA_DIR, TARGET, EXCEPTIONS_FILE)
 
 IMA_ERROR_TEXT = "Loop"
 CHECK_PERIOD = 10
-LINES_COUNT = 100
-
+LINES_COUNT = 300
+FORMAT = '%Y-%m-%d %H:%M:%S.%f'
 
 with open(EXCEPTIONS_FILE_PATH) as json_file:
     data = json.load(json_file)
@@ -94,31 +94,43 @@ def test_ima_logs(host):
     ktm_conts = [ktm_prefix + schain_name for schain_name in nodes[ip] if schain_name not in bad_schains]
 
     print(ktm_conts)
-    err_count = 0
+
     now = datetime.utcnow()
     print(now)
     prev_check_time = now - timedelta(minutes=CHECK_PERIOD)
     print(f'Prev check time: {prev_check_time}')
+    failed_conts = []
     for cont in ktm_conts:
+        err_count = 0
+        err_count2 = 0
         cmd = f'docker logs --tail {LINES_COUNT} {cont} 2>&1| grep "{IMA_ERROR_TEXT}"'
         output_result = escape_ansi(host.check_output(cmd))
 
         # print(f"output: {output_result}")
         lines = output_result.splitlines()
-        print(f"all lines: {lines}")
+        # print(f"all lines: {lines}")
 
         print('line by line:')
         for line in lines:
-            print(line)
-            cur_log_time = parse(line, fuzzy_with_tokens=True)[0]
+            print(f'line = {line}')
+            # print(parse(line, fuzzy_with_tokens=True))
+            # cur_log_time = parse(line, fuzzy_with_tokens=True)[0]
+            # cur_log_time = parse(line, fuzzy=False)
+            match = re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3}', line)
+            cur_log_time = datetime.strptime(match.group(), FORMAT)
             print(f'extracted = {cur_log_time}')
+
             if cur_log_time < prev_check_time:
-                break
+                print('skipping')
+                err_count2 += 1
+                continue
             if IMA_ERROR_TEXT in line:
                 print(f'Error in IMA {cont} on host {ip}')
                 err_count += 1
-
-    assert err_count == 0, "There are errors in IMA logs - in {} containers".format(err_count)
+        if err_count > 0:
+            failed_conts.append(cont)
+        print(err_count, err_count2)
+    assert len(failed_conts) == 0, "There are errors in IMA logs - in {} containers: {}".format(len(failed_conts), failed_conts)
 
 
 @pytest.mark.skip(reason="skip to save time for debug")
