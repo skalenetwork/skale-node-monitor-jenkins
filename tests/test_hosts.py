@@ -1,4 +1,3 @@
-from dateutil.parser import parse
 import json
 import os
 import re
@@ -66,7 +65,7 @@ testinfra_hosts = [prefix + ip for ip in ips]
 print(testinfra_hosts)
 
 
-@pytest.mark.skip(reason="skip to save time")
+# @pytest.mark.skip(reason="skip to save time")
 @pytest.mark.filterwarnings('ignore')
 def test_docker_containers_are_running(host):
     ip = host.backend.host.name
@@ -79,13 +78,20 @@ def test_docker_containers_are_running(host):
 
     containers = [admin_cont] + schain_conts + ktm_conts
     print(containers)
+    err_count = 0
+    failed_conts = []
     for cont in containers:
         cmd = f"docker ps | grep {cont}"
         output_result = host.check_output(cmd)
         print(f"output: {output_result}")
-        assert " Up " in output_result, "Container {} should be Up".format(cont)
+        if " Up " not in output_result:
+            failed_conts.append(cont)
+            err_count += 1
+        # assert " Up " in output_result, "Container {} should be Up".format(cont)
+    assert err_count == 0, "Containers {} should be Up".format(failed_conts)
 
 
+@pytest.mark.skip(reason="skip to save time for debug")
 @pytest.mark.filterwarnings('ignore')
 def test_ima_logs(host):
     ip = host.backend.host.name
@@ -113,9 +119,6 @@ def test_ima_logs(host):
         print('line by line:')
         for line in lines:
             print(f'line = {line}')
-            # print(parse(line, fuzzy_with_tokens=True))
-            # cur_log_time = parse(line, fuzzy_with_tokens=True)[0]
-            # cur_log_time = parse(line, fuzzy=False)
             match = re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3}', line)
             cur_log_time = datetime.strptime(match.group(), FORMAT)
             print(f'extracted = {cur_log_time}')
