@@ -91,7 +91,7 @@ def test_docker_containers_are_running(host):
     assert err_count == 0, "Containers {} should be Up".format(failed_conts)
 
 
-@pytest.mark.skip(reason="skip to save time for debug")
+# @pytest.mark.skip(reason="skip to save time for debug")
 @pytest.mark.filterwarnings('ignore')
 def test_ima_logs(host):
     ip = host.backend.host.name
