@@ -112,9 +112,9 @@ def test_ima_logs(host):
         cmd = f'docker logs --tail {LINES_COUNT} {cont} 2>&1| grep "{IMA_ERROR_TEXT}"'
         output_result = escape_ansi(host.check_output(cmd))
 
-        # print(f"output: {output_result}")
+        print(f"output: {output_result}")
         lines = output_result.splitlines()
-        # print(f"all lines: {lines}")
+        print(f"all lines: {lines}")
 
         print('line by line:')
         for line in lines:
