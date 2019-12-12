@@ -109,7 +109,7 @@ def test_ima_logs(host):
     for cont in ktm_conts:
         err_count = 0
         err_count2 = 0
-        cmd = f'docker logs --tail {LINES_COUNT} {cont} 2>&1| grep "{IMA_ERROR_TEXT}"'
+        cmd = f'docker logs --tail {LINES_COUNT} {cont} 2>&1| grep "{IMA_ERROR_TEXT}" || true'
         output_result = escape_ansi(host.check_output(cmd))
 
         print(f"output: {output_result}")
@@ -136,7 +136,7 @@ def test_ima_logs(host):
     assert len(failed_conts) == 0, "There are errors in IMA logs - in {} containers: {}".format(len(failed_conts), failed_conts)
 
 
-@pytest.mark.skip(reason="skip to save time for debug")
+# @pytest.mark.skip(reason="skip to save time for debug")
 @pytest.mark.filterwarnings('ignore')
 def test_disk_space(host):
 
@@ -148,7 +148,7 @@ def test_disk_space(host):
         assert int(mount_usage[key][:-1]) < max_disk_usage, "Disk usage for '{}' should be less than {}%".format(key, max_disk_usage)
 
 
-@pytest.mark.skip(reason="skip to save time time for debug")
+# @pytest.mark.skip(reason="skip to save time time for debug")
 @pytest.mark.filterwarnings('ignore')
 def test_memory(host):
     mem_min_limit = 400  # in MB
