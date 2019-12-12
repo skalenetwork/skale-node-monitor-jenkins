@@ -55,9 +55,20 @@
         "deposit": 1000000000000000000,
         "index": 4,
         "active": true
+      },
+      {
+        "name": "handsome-achernar",
+        "owner": "0x87CA1A03edC97B7b59468755719F3C7A95231954",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078880,
+        "deposit": 1000000000000000000,
+        "index": 5,
+        "active": true
       }
     ],
-    "amount": 5,
+    "amount": 6,
     "node": {
       "name": "SIP1112-1",
       "ip": "64.225.40.202",
@@ -121,9 +132,20 @@
         "deposit": 1000000000000000000,
         "index": 4,
         "active": true
+      },
+      {
+        "name": "handsome-achernar",
+        "owner": "0x87CA1A03edC97B7b59468755719F3C7A95231954",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078880,
+        "deposit": 1000000000000000000,
+        "index": 5,
+        "active": true
       }
     ],
-    "amount": 5,
+    "amount": 6,
     "node": {
       "name": "SIP1112-0",
       "ip": "165.227.8.170",
