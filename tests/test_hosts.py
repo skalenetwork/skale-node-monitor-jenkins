@@ -107,32 +107,33 @@ def test_ima_logs(host):
     print(f'Prev check time: {prev_check_time}')
     failed_conts = []
     for cont in ktm_conts:
+        print(f'Checking {cont}...')
         err_count = 0
-        err_count2 = 0
+        err_skipped_count = 0
         cmd = f'docker logs --tail {LINES_COUNT} {cont} 2>&1| grep "{IMA_ERROR_TEXT}" || true'
         output_result = escape_ansi(host.check_output(cmd))
+        if output_result:
+            print(f"output: {output_result}")
+            lines = output_result.splitlines()
+            print(f"all lines: {lines}")
 
-        print(f"output: {output_result}")
-        lines = output_result.splitlines()
-        print(f"all lines: {lines}")
+            print('Lines with errors:')
+            for line in lines:
+                print(f'{line}')
+                match = re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3}', line)
+                cur_log_time = datetime.strptime(match.group(), FORMAT)
+                # print(f'extracted = {cur_log_time}')
 
-        print('line by line:')
-        for line in lines:
-            print(f'line = {line}')
-            match = re.search(r'\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}.\d{3}', line)
-            cur_log_time = datetime.strptime(match.group(), FORMAT)
-            print(f'extracted = {cur_log_time}')
-
-            if cur_log_time < prev_check_time:
-                print('skipping')
-                err_count2 += 1
-                continue
-            if IMA_ERROR_TEXT in line:
-                print(f'Error in IMA {cont} on host {ip}')
-                err_count += 1
+                if cur_log_time < prev_check_time:
+                    print('skipping')
+                    err_skipped_count += 1
+                    continue
+                if IMA_ERROR_TEXT in line:
+                    print(f'Error in IMA {cont} on host {ip}')
+                    err_count += 1
         if err_count > 0:
             failed_conts.append(cont)
-        print(err_count, err_count2)
+        print(f'Errors: {err_count}, Skipped: {err_skipped_count}')
     assert len(failed_conts) == 0, "There are errors in IMA logs - in {} containers: {}".format(len(failed_conts), failed_conts)
 
 
