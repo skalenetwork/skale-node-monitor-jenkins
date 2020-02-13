@@ -1,24 +1,24 @@
 {
     "schain_info": {
         "schain_struct": {
-            "name": "whispering-mira",
-            "owner": "0x10CBd7EEC70aC47629B7d34CaF82765985cEE5d3",
+            "name": "purring-propus",
+            "owner": "0x783263b1261bE60A3e49938309446a455f99C1E7",
             "indexInOwnerList": 0,
             "partOfNode": 0,
             "lifetime": 3600,
-            "startDate": 1581521238,
+            "startDate": 1581619768,
             "deposit": 1000000000000000000,
-            "index": 3
+            "index": 22
         },
         "schain_nodes": [
             {
                 "nodeID": 1,
                 "nodeName": "node1",
-                "basePort": 10033,
-                "httpRpcPort": 10035,
-                "httpsRpcPort": 10040,
-                "wsRpcPort": 10036,
-                "wssRpcPort": 10041,
+                "basePort": 10242,
+                "httpRpcPort": 10244,
+                "httpsRpcPort": 10249,
+                "wsRpcPort": 10245,
+                "wssRpcPort": 10250,
                 "publicKey": "ef76495efdc39190ba6788c9f2b09b4abd24b9ca169e7309060037e44a954b2d38c8cc4cd06632b00bc9501c9b629d0ecd5363e8d4471c8704ae0e196f5309f7",
                 "owner": "0x485bdd897064c5662ccba4e1b0ad1c855fbb02c0",
                 "schainIndex": 1,
@@ -28,11 +28,11 @@
             {
                 "nodeID": 0,
                 "nodeName": "node0",
-                "basePort": 10033,
-                "httpRpcPort": 10035,
-                "httpsRpcPort": 10040,
-                "wsRpcPort": 10036,
-                "wssRpcPort": 10041,
+                "basePort": 10242,
+                "httpRpcPort": 10244,
+                "httpsRpcPort": 10249,
+                "wsRpcPort": 10245,
+                "wssRpcPort": 10250,
                 "publicKey": "6ceb7ecb79d10f2a6935832293fddda672d6dac00a1c7bf1aaa634d8776f40f95e2f2850a6e0447edc9210038c1c39d38afcbc6b6ed806673e0389a6de9f2e31",
                 "owner": "0xa2a87b66040a59343abc4fefb14e347ebf0075fa",
                 "schainIndex": 2,
@@ -42,7 +42,7 @@
         ]
     },
     "wallet": {
-        "address": "0x10CBd7EEC70aC47629B7d34CaF82765985cEE5d3",
-        "private_key": "0x81f073b04c1e1da31245322045d830bb6bec0940840e2ff54e590a9450e30b1b"
+        "address": "0x783263b1261bE60A3e49938309446a455f99C1E7",
+        "private_key": "0x850d234110028690a621156b0e17de3eec970dfa50a33724f6b9845ac65cfd65"
     }
 }
