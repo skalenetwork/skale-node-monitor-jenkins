@@ -1,0 +1,48 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "dazzling-sarin",
+            "owner": "0xcA0aA8c884940858b02b8bf705d81c6B7428f402",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1581696720,
+            "deposit": 1000000000000000000,
+            "index": 29
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 0,
+                "nodeName": "node0",
+                "basePort": 10319,
+                "httpRpcPort": 10321,
+                "httpsRpcPort": 10326,
+                "wsRpcPort": 10322,
+                "wssRpcPort": 10327,
+                "publicKey": "6ceb7ecb79d10f2a6935832293fddda672d6dac00a1c7bf1aaa634d8776f40f95e2f2850a6e0447edc9210038c1c39d38afcbc6b6ed806673e0389a6de9f2e31",
+                "owner": "0xa2a87b66040a59343abc4fefb14e347ebf0075fa",
+                "schainIndex": 1,
+                "ip": "178.128.11.103",
+                "publicIP": "178.128.11.103"
+            },
+            {
+                "nodeID": 1,
+                "nodeName": "node1",
+                "basePort": 10319,
+                "httpRpcPort": 10321,
+                "httpsRpcPort": 10326,
+                "wsRpcPort": 10322,
+                "wssRpcPort": 10327,
+                "publicKey": "ef76495efdc39190ba6788c9f2b09b4abd24b9ca169e7309060037e44a954b2d38c8cc4cd06632b00bc9501c9b629d0ecd5363e8d4471c8704ae0e196f5309f7",
+                "owner": "0x485bdd897064c5662ccba4e1b0ad1c855fbb02c0",
+                "schainIndex": 2,
+                "ip": "178.128.11.194",
+                "publicIP": "178.128.11.194"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xcA0aA8c884940858b02b8bf705d81c6B7428f402",
+        "private_key": "0xd96cc7e9a680522362f0c455f14e836071c50797e7df2ebc1fa83bf3ca0f10e1"
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "stocky-sualocin",
+            "owner": "0x6E02fEf8ccA01502ffd6eD842de7f4d3D84114F8",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1581699094,
+            "deposit": 1000000000000000000,
+            "index": 41
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 0,
+                "nodeName": "node0",
+                "basePort": 10451,
+                "httpRpcPort": 10453,
+                "httpsRpcPort": 10458,
+                "wsRpcPort": 10454,
+                "wssRpcPort": 10459,
+                "publicKey": "6ceb7ecb79d10f2a6935832293fddda672d6dac00a1c7bf1aaa634d8776f40f95e2f2850a6e0447edc9210038c1c39d38afcbc6b6ed806673e0389a6de9f2e31",
+                "owner": "0xa2a87b66040a59343abc4fefb14e347ebf0075fa",
+                "schainIndex": 1,
+                "ip": "178.128.11.103",
+                "publicIP": "178.128.11.103"
+            },
+            {
+                "nodeID": 1,
+                "nodeName": "node1",
+                "basePort": 10451,
+                "httpRpcPort": 10453,
+                "httpsRpcPort": 10458,
+                "wsRpcPort": 10454,
+                "wssRpcPort": 10459,
+                "publicKey": "ef76495efdc39190ba6788c9f2b09b4abd24b9ca169e7309060037e44a954b2d38c8cc4cd06632b00bc9501c9b629d0ecd5363e8d4471c8704ae0e196f5309f7",
+                "owner": "0x485bdd897064c5662ccba4e1b0ad1c855fbb02c0",
+                "schainIndex": 2,
+                "ip": "178.128.11.194",
+                "publicIP": "178.128.11.194"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x6E02fEf8ccA01502ffd6eD842de7f4d3D84114F8",
+        "private_key": "0x279ee3eea174e8df3ee95d889bca59425e8a9dfe0d744a66c4c92ba5990a1d09"
+    }
+}
