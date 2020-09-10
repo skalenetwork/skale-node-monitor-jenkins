@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "whispering-tania-australis",
+            "owner": "0x414f0463e0e56238792D6b6665C91bEEfba98673",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1576078250,
+            "deposit": 1000000000000000000,
+            "index": 4
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 1,
+                "nodeName": "SIP1112-0",
+                "basePort": 10044,
+                "httpRpcPort": 10046,
+                "httpsRpcPort": 10051,
+                "wsRpcPort": 10047,
+                "wssRpcPort": 10052,
+                "publicKey": "6a64e544f9f93f02e80b23909374daae27cdb7944e33afdd9c03b4c72cd303dee75289afc4d5acd641728fb753e6f3b6c95d40d88ec163fa4eea99d7d3f87aaf",
+                "owner": "0xbc197becb0fac94599ff3fdc451ccdf02f068ca5",
+                "schainIndex": 1,
+                "ip": "165.227.8.170",
+                "publicIP": "165.227.8.170",
+                "link": "sip1112-0.skalenodes.com",
+                "https_url": "https://sip1112-0.skalenodes.com:10051",
+                "wss_url": "wss://sip1112-0.skalenodes.com:10052",
+                "http_url": "http://sip1112-0.skalenodes.com:10046",
+                "ws_url": "ws://sip1112-0.skalenodes.com:10047"
+            },
+            {
+                "nodeID": 0,
+                "nodeName": "SIP1112-1",
+                "basePort": 10044,
+                "httpRpcPort": 10046,
+                "httpsRpcPort": 10051,
+                "wsRpcPort": 10047,
+                "wssRpcPort": 10052,
+                "publicKey": "78b81a89f3438c183a785b7367c3ecfd53922d662d814eb49d6e4efc8844e0f00d38bf6020cee43a219315e9a038388d735646183d22584bec5252927bf99c6b",
+                "owner": "0x46436081646598f1367a43f35207945a6c156b7e",
+                "schainIndex": 2,
+                "ip": "64.225.40.202",
+                "publicIP": "64.225.40.202",
+                "link": "sip1112-1.skalenodes.com",
+                "https_url": "https://sip1112-1.skalenodes.com:10051",
+                "wss_url": "wss://sip1112-1.skalenodes.com:10052",
+                "http_url": "http://sip1112-1.skalenodes.com:10046",
+                "ws_url": "ws://sip1112-1.skalenodes.com:10047"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x414f0463e0e56238792D6b6665C91bEEfba98673",
+        "private_key": "0x3d8ecea6df437633b0e6b0cdd1be035d31261869bd43834ecbdc3f988be843c7"
+    }
+}

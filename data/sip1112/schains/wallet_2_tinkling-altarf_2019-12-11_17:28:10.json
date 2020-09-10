@@ -1,0 +1,58 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "tinkling-altarf",
+            "owner": "0xF418Be0F0fa070C8a83135900d44b3864B981000",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1576078083,
+            "deposit": 1000000000000000000,
+            "index": 2
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 0,
+                "nodeName": "SIP1112-1",
+                "basePort": 10022,
+                "httpRpcPort": 10024,
+                "httpsRpcPort": 10029,
+                "wsRpcPort": 10025,
+                "wssRpcPort": 10030,
+                "publicKey": "78b81a89f3438c183a785b7367c3ecfd53922d662d814eb49d6e4efc8844e0f00d38bf6020cee43a219315e9a038388d735646183d22584bec5252927bf99c6b",
+                "owner": "0x46436081646598f1367a43f35207945a6c156b7e",
+                "schainIndex": 1,
+                "ip": "64.225.40.202",
+                "publicIP": "64.225.40.202",
+                "link": "sip1112-1.skalenodes.com",
+                "https_url": "https://sip1112-1.skalenodes.com:10029",
+                "wss_url": "wss://sip1112-1.skalenodes.com:10030",
+                "http_url": "http://sip1112-1.skalenodes.com:10024",
+                "ws_url": "ws://sip1112-1.skalenodes.com:10025"
+            },
+            {
+                "nodeID": 1,
+                "nodeName": "SIP1112-0",
+                "basePort": 10022,
+                "httpRpcPort": 10024,
+                "httpsRpcPort": 10029,
+                "wsRpcPort": 10025,
+                "wssRpcPort": 10030,
+                "publicKey": "6a64e544f9f93f02e80b23909374daae27cdb7944e33afdd9c03b4c72cd303dee75289afc4d5acd641728fb753e6f3b6c95d40d88ec163fa4eea99d7d3f87aaf",
+                "owner": "0xbc197becb0fac94599ff3fdc451ccdf02f068ca5",
+                "schainIndex": 2,
+                "ip": "165.227.8.170",
+                "publicIP": "165.227.8.170",
+                "link": "sip1112-0.skalenodes.com",
+                "https_url": "https://sip1112-0.skalenodes.com:10029",
+                "wss_url": "wss://sip1112-0.skalenodes.com:10030",
+                "http_url": "http://sip1112-0.skalenodes.com:10024",
+                "ws_url": "ws://sip1112-0.skalenodes.com:10025"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0xF418Be0F0fa070C8a83135900d44b3864B981000",
+        "private_key": "0xce08216bb342a9672a7c09a59e1f278979591df603eeb233c002e4cd7fd25d86"
+    }
+}

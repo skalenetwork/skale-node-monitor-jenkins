@@ -1,0 +1,156 @@
+[
+  {
+    "schains": [
+      {
+        "name": "plain-pollux",
+        "owner": "0xE12E9e0F5E0F421C7aee4685a4EaEacCCb55f885",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576077923,
+        "deposit": 1000000000000000000,
+        "index": 0,
+        "active": true
+      },
+      {
+        "name": "howling-alkalurops",
+        "owner": "0x0B17262E2dB63Ff75b02d6f3ca5C6301C89456CB",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078005,
+        "deposit": 1000000000000000000,
+        "index": 1,
+        "active": true
+      },
+      {
+        "name": "tinkling-altarf",
+        "owner": "0xF418Be0F0fa070C8a83135900d44b3864B981000",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078083,
+        "deposit": 1000000000000000000,
+        "index": 2,
+        "active": true
+      },
+      {
+        "name": "hissing-alniyat",
+        "owner": "0xF93f0040904a31CE01368d7121d10240380449c3",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078166,
+        "deposit": 1000000000000000000,
+        "index": 3,
+        "active": true
+      },
+      {
+        "name": "whispering-tania-australis",
+        "owner": "0x414f0463e0e56238792D6b6665C91bEEfba98673",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078250,
+        "deposit": 1000000000000000000,
+        "index": 4,
+        "active": true
+      },
+      {
+        "name": "handsome-achernar",
+        "owner": "0x87CA1A03edC97B7b59468755719F3C7A95231954",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078880,
+        "deposit": 1000000000000000000,
+        "index": 5,
+        "active": true
+      }
+    ],
+    "amount": 6,
+    "node": {
+      "name": "SIP1112-1",
+      "ip": "64.225.40.202",
+      "basePort": 10000,
+      "publicIP": "64.225.40.202"
+    }
+  },
+  {
+    "schains": [
+      {
+        "name": "plain-pollux",
+        "owner": "0xE12E9e0F5E0F421C7aee4685a4EaEacCCb55f885",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576077923,
+        "deposit": 1000000000000000000,
+        "index": 0,
+        "active": true
+      },
+      {
+        "name": "howling-alkalurops",
+        "owner": "0x0B17262E2dB63Ff75b02d6f3ca5C6301C89456CB",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078005,
+        "deposit": 1000000000000000000,
+        "index": 1,
+        "active": true
+      },
+      {
+        "name": "tinkling-altarf",
+        "owner": "0xF418Be0F0fa070C8a83135900d44b3864B981000",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078083,
+        "deposit": 1000000000000000000,
+        "index": 2,
+        "active": true
+      },
+      {
+        "name": "hissing-alniyat",
+        "owner": "0xF93f0040904a31CE01368d7121d10240380449c3",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078166,
+        "deposit": 1000000000000000000,
+        "index": 3,
+        "active": true
+      },
+      {
+        "name": "whispering-tania-australis",
+        "owner": "0x414f0463e0e56238792D6b6665C91bEEfba98673",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078250,
+        "deposit": 1000000000000000000,
+        "index": 4,
+        "active": true
+      },
+      {
+        "name": "handsome-achernar",
+        "owner": "0x87CA1A03edC97B7b59468755719F3C7A95231954",
+        "indexInOwnerList": 0,
+        "partOfNode": 0,
+        "lifetime": 3600,
+        "startDate": 1576078880,
+        "deposit": 1000000000000000000,
+        "index": 5,
+        "active": true
+      }
+    ],
+    "amount": 6,
+    "node": {
+      "name": "SIP1112-0",
+      "ip": "165.227.8.170",
+      "basePort": 10000,
+      "publicIP": "165.227.8.170"
+    }
+  }
+]

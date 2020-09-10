@@ -1,0 +1,48 @@
+{
+    "schain_info": {
+        "schain_struct": {
+            "name": "echoing-ed-asich",
+            "owner": "0x2f731F481cB1D8B5FA64A80913dd7572421896ba",
+            "indexInOwnerList": 0,
+            "partOfNode": 0,
+            "lifetime": 3600,
+            "startDate": 1581694046,
+            "deposit": 1000000000000000000,
+            "index": 19
+        },
+        "schain_nodes": [
+            {
+                "nodeID": 0,
+                "nodeName": "node0",
+                "basePort": 10154,
+                "httpRpcPort": 10156,
+                "httpsRpcPort": 10161,
+                "wsRpcPort": 10157,
+                "wssRpcPort": 10162,
+                "publicKey": "6ceb7ecb79d10f2a6935832293fddda672d6dac00a1c7bf1aaa634d8776f40f95e2f2850a6e0447edc9210038c1c39d38afcbc6b6ed806673e0389a6de9f2e31",
+                "owner": "0xa2a87b66040a59343abc4fefb14e347ebf0075fa",
+                "schainIndex": 1,
+                "ip": "178.128.11.103",
+                "publicIP": "178.128.11.103"
+            },
+            {
+                "nodeID": 1,
+                "nodeName": "node1",
+                "basePort": 10154,
+                "httpRpcPort": 10156,
+                "httpsRpcPort": 10161,
+                "wsRpcPort": 10157,
+                "wssRpcPort": 10162,
+                "publicKey": "ef76495efdc39190ba6788c9f2b09b4abd24b9ca169e7309060037e44a954b2d38c8cc4cd06632b00bc9501c9b629d0ecd5363e8d4471c8704ae0e196f5309f7",
+                "owner": "0x485bdd897064c5662ccba4e1b0ad1c855fbb02c0",
+                "schainIndex": 2,
+                "ip": "178.128.11.194",
+                "publicIP": "178.128.11.194"
+            }
+        ]
+    },
+    "wallet": {
+        "address": "0x2f731F481cB1D8B5FA64A80913dd7572421896ba",
+        "private_key": "0x68ea0ec3372d3fd6a2988fd7be0c1269f53b6df67977eafc4e51c21abd7c9d11"
+    }
+}
